@@ -29,6 +29,9 @@ upgrade_strategy  = build_upgrade_strategy(node['ruby_build']['upgrade'])
 cache_path  = Chef::Config['file_cache_path']
 src_path    = "#{cache_path}/ruby-build"
 
+puts "Upgrade: #{node['ruby-build']['upgrade']}"
+puts "Version: #{node['ruby-build']['git_ref']}"
+
 unless mac_with_no_homebrew
   Array(node['ruby_build']['install_pkgs']).each do |pkg|
     package pkg
