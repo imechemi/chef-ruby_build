@@ -36,6 +36,9 @@ end
 private
 
 def perform_install
+  puts "Hello Chemi!"
+  puts "Upgrade: new_resource.upgrade"
+  puts "Version: new_resource.git_ref"
   if ruby_installed?
     Chef::Log.debug(
       "ruby_build_ruby[#{@rubie}] is already installed, so skipping")
