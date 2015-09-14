@@ -33,7 +33,7 @@ unless mac_with_no_homebrew
   Array(node['ruby_build']['install_pkgs']).each do |pkg|
     package pkg
   end
-
+  puts "Cache path: #{cache_path}"
   puts "Upgrade: #{upgrade_strategy}"
   puts "Version: #{git_ref}"
 
