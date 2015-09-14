@@ -34,8 +34,8 @@ unless mac_with_no_homebrew
     package pkg
   end
 
-  puts "Upgrade: #{node['ruby-build']['upgrade']}"
-puts "Version: #{node['ruby-build']['git_ref']}"
+  puts "Upgrade: #{upgrade_strategy}"
+  puts "Version: #{git_ref}"
 
   Array(node['ruby_build']['install_git_pkgs']).each do |pkg|
     package pkg do
